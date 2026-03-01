@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBDC1ACB2F25B85400F8A994 /* ArchiLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDC1ACA2F25B85400F8A994 /* ArchiLensApp.swift */; };
+		EBDC1ACD2F25B85400F8A994 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDC1ACC2F25B85400F8A994 /* ContentView.swift */; };
+		EBDC1ACF2F25B85500F8A994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBDC1ACE2F25B85500F8A994 /* Assets.xcassets */; };
+		EBDC1AFE2F25C09F00F8A994 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDC1AFD2F25BEE000F8A994 /* ARViewContainer.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EBDC1AD52F25B85500F8A994 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,16 +32,15 @@
 
 /* Begin PBXFileReference section */
 		EBDC1AC72F25B85400F8A994 /* ArchiLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchiLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDC1ACA2F25B85400F8A994 /* ArchiLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiLensApp.swift; sourceTree = "<group>"; };
+		EBDC1ACC2F25B85400F8A994 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EBDC1ACE2F25B85500F8A994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBDC1AD42F25B85500F8A994 /* ArchiLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchiLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDC1ADE2F25B85500F8A994 /* ArchiLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchiLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDC1AFD2F25BEE000F8A994 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EBDC1AC92F25B85400F8A994 /* ArchiLens */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ArchiLens;
-			sourceTree = "<group>";
-		};
 		EBDC1AD72F25B85500F8A994 /* ArchiLensTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ArchiLensTests;
@@ -75,7 +81,10 @@
 		EBDC1ABE2F25B85400F8A994 = {
 			isa = PBXGroup;
 			children = (
-				EBDC1AC92F25B85400F8A994 /* ArchiLens */,
+				EBDC1AFB2F25BA2600F8A994 /* Resources */,
+				EBDC1AF72F25B9F100F8A994 /* Features */,
+				EBDC1AF32F25B9C400F8A994 /* Core */,
+				EBDC1AF12F25B95D00F8A994 /* App */,
 				EBDC1AD72F25B85500F8A994 /* ArchiLensTests */,
 				EBDC1AE12F25B85500F8A994 /* ArchiLensUITests */,
 				EBDC1AC82F25B85400F8A994 /* Products */,
@@ -92,6 +101,94 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EBDC1AF12F25B95D00F8A994 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EBDC1ACA2F25B85400F8A994 /* ArchiLensApp.swift */,
+				EBDC1ACE2F25B85500F8A994 /* Assets.xcassets */,
+				EBDC1ACC2F25B85400F8A994 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EBDC1AF32F25B9C400F8A994 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EBDC1AF62F25B9E600F8A994 /* Constants */,
+				EBDC1AF52F25B9DA00F8A994 /* Extensions */,
+				EBDC1AF42F25B9D000F8A994 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EBDC1AF42F25B9D000F8A994 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EBDC1AF52F25B9DA00F8A994 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBDC1AF62F25B9E600F8A994 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EBDC1AF72F25B9F100F8A994 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EBDC1AFA2F25BA1B00F8A994 /* Settings */,
+				EBDC1AF92F25BA1200F8A994 /* Measurement */,
+				EBDC1AF82F25BA0900F8A994 /* AR */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EBDC1AF82F25BA0900F8A994 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				EBDC1AFC2F25BECF00F8A994 /* Views */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		EBDC1AF92F25BA1200F8A994 /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
+		EBDC1AFA2F25BA1B00F8A994 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EBDC1AFB2F25BA2600F8A994 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBDC1AFC2F25BECF00F8A994 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBDC1AFD2F25BEE000F8A994 /* ARViewContainer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +203,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EBDC1AC92F25B85400F8A994 /* ArchiLens */,
 			);
 			name = ArchiLens;
 			packageProductDependencies = (
@@ -212,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDC1ACF2F25B85500F8A994 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDC1ACD2F25B85400F8A994 /* ContentView.swift in Sources */,
+				EBDC1ACB2F25B85400F8A994 /* ArchiLensApp.swift in Sources */,
+				EBDC1AFE2F25C09F00F8A994 /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +493,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTPQ84T2CV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Camera access is required to perform spatial measurements and scan the environment.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,8 +526,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTPQ84T2CV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Camera access is required to perform spatial measurements and scan the environment.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
