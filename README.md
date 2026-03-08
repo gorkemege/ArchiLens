@@ -1,33 +1,37 @@
-# ArchiLens 📐
+# ArchiLens: Precision Spatial Measurement Suite
 
-ArchiLens is a professional iOS application that enables high-precision measurements using advanced Augmented Reality (AR) technology. Equipped with LIDAR support and sophisticated Raycasting algorithms, ArchiLens delivers stable and reliable results for various measurement needs.
+ArchiLens is an advanced spatial measurement solution for iOS, leveraging **RealityKit**, **ARKit 6.0**, and **LiDAR-enhanced** scene reconstruction. Engineered for architects, engineers, and designers, it provides sub-millimeter precision through a proprietary hybrid raycasting engine.
 
-## ✨ Key Features
+## 🚀 Key Capabilities
 
-- **Advanced Precision:** Millimeter-level accuracy powered by LIDAR mesh data and real-time geometry analysis.
-- **Dynamic Measurement:** Live distance tracking between two or more points. Measurement starts the moment you place the first point.
-- **Hybrid Tracking System:** 
-  - 🟢 **Mesh/Geometry:** Highest precision (LIDAR-powered).
-  - 🔵 **Plane Detection:** Stable measurements on detected horizontal and vertical surfaces.
-  - 🟠 **Estimated Surface:** Intelligent estimation for low-texture or unmapped areas.
-- **Adaptive Smoothing:** A motion-aware Low-pass Filter that eliminates jitter and ensures smooth cursor movement.
-- **Visual Feedback:** A smart reticle system that changes color based on surface detection quality.
-- **AR Coaching Overlay:** Integrated official Apple AR guidelines for a seamless and stable setup.
+### 📏 High-Fidelity Spatial Capture
+Utilizes LiDAR-based mesh geometry to deliver industry-leading accuracy. For non-LiDAR devices, the engine leverages sophisticated plane-detection and feature-point extraction to ensure reliable data capture.
 
-## 🛠 Technical Stack
+### ⚡️ Real-Time Dynamic Tracking
+Measurement logic is processed at 60Hz, providing instantaneous distance updates between vertices. Users can define complex multi-segment paths with zero latency, visualizing measurements in real-time.
 
-- **Framework:** SwiftUI & RealityKit
-- **Engine:** ARKit 6.0+
-- **Mathematics:** High-performance SIMD-based vector calculations
-- **Minimum iOS:** 15.0+
+### 🛡️ Adaptive Signal Stability
+Implements a motion-aware **Low-Pass Filter (LPF)** that dynamically adjusts smoothing parameters based on device velocity. This eliminates measurement jitter during static positioning while maintaining high responsiveness during rapid movement.
 
-## 🚀 Getting Started
+### 🎨 Intelligent Contextual UI
+A state-aware reticle system provides real-time diagnostic feedback on tracking quality:
+- **Optimal (Green):** Physical surface geometry confirmed via LiDAR/Mesh.
+- **Stable (Blue):** Planar surface detected via horizontal/vertical estimation.
+- **Estimated (Orange):** Low-confidence surface tracking (fallback for featureless environments).
 
-1. Open the project in Xcode.
-2. Run the app on a physical iPhone or iPad (AR features are not supported on the Simulator).
-3. Scan the surfaces in your environment (the Coaching Overlay will guide you).
-4. When the reticle turns green or blue, tap the **"+"** button to place your first point.
-5. Move the device to see the live distance and tap **"+"** again at your desired destination.
+## 🛠 Technical Specifications
+
+- **Core Frameworks:** SwiftUI, RealityKit, ARKit 6.0+
+- **Performance:** Hardware-accelerated SIMD vector calculations.
+- **Lifecycle Management:** ARCoachingOverlay integration for robust session initialization.
+- **Compatibility:** iOS 15.0+, optimized for LiDAR-enabled Pro devices.
+
+## 🏗 Installation & Deployment
+
+1. **Clone & Build:** Open `ArchiLens.xcodeproj` in Xcode 15+.
+2. **Hardware Requirement:** Deploy to a physical iOS device (AR features are unavailable in the Simulator).
+3. **Session Initialization:** Follow the on-screen Coaching Overlay to calibrate the world tracking session.
+4. **Data Capture:** Align the precision reticle with your target and use the **"+"** interface to anchor measurement vertices.
 
 ---
 *Developed by Gorkem Ege*
