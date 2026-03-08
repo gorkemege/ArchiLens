@@ -34,4 +34,4 @@ A state-aware reticle system provides real-time diagnostic feedback on tracking 
 4. **Data Capture:** Align the precision reticle with your target and use the **"+"** interface to anchor measurement vertices.
 
 ---
-*Developed by Gorkem Ege*
+*Developed by Görkem Ege Zor*
