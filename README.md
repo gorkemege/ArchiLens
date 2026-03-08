@@ -1,33 +1,33 @@
 # ArchiLens 📐
 
-ArchiLens, gelişmiş artırılmış gerçeklik (AR) teknolojisini kullanarak milimetrik hassasiyette ölçüm yapmanızı sağlayan profesyonel bir iOS uygulamasıdır. LIDAR ve gelişmiş Raycasting algoritmaları ile donatılmış olan ArchiLens, kararlı ve güvenilir sonuçlar sunar.
+ArchiLens is a professional iOS application that enables high-precision measurements using advanced Augmented Reality (AR) technology. Equipped with LIDAR support and sophisticated Raycasting algorithms, ArchiLens delivers stable and reliable results for various measurement needs.
 
-## ✨ Yeni Nesil Özellikler
+## ✨ Key Features
 
-- **Gelişmiş Hassasiyet:** LIDAR mesh verisi ve gerçek zamanlı geometri analizi ile milimetrik doğruluk.
-- **Dinamik Ölçüm:** İki veya daha fazla nokta arasında canlı mesafe takibi. İlk noktayı koyduğunuz an ölçüm başlar.
-- **Hibrit Takip Sistemi:** 
-  - 🟢 **Mesh/Geometry:** En yüksek hassasiyet (LIDAR destekli).
-  - 🔵 **Plane Detection:** Algılanan yüzeyler üzerinde kararlı ölçüm.
-  - 🟠 **Estimated Surface:** Düşük dokulu alanlarda akıllı tahminleme.
-- **Adaptif Yumuşatma (Smoothing):** Ölçümlerdeki titremeyi engelleyen, hareket hızına duyarlı düşük geçirgenli filtre (Low-pass Filter).
-- **Görsel Geri Bildirim:** Yüzey durumuna göre renk değiştiren akıllı imleç (Reticle) sistemi.
-- **AR Coaching Overlay:** Kararlı bir deneyim için resmi Apple AR yönlendirmeleri.
+- **Advanced Precision:** Millimeter-level accuracy powered by LIDAR mesh data and real-time geometry analysis.
+- **Dynamic Measurement:** Live distance tracking between two or more points. Measurement starts the moment you place the first point.
+- **Hybrid Tracking System:** 
+  - 🟢 **Mesh/Geometry:** Highest precision (LIDAR-powered).
+  - 🔵 **Plane Detection:** Stable measurements on detected horizontal and vertical surfaces.
+  - 🟠 **Estimated Surface:** Intelligent estimation for low-texture or unmapped areas.
+- **Adaptive Smoothing:** A motion-aware Low-pass Filter that eliminates jitter and ensures smooth cursor movement.
+- **Visual Feedback:** A smart reticle system that changes color based on surface detection quality.
+- **AR Coaching Overlay:** Integrated official Apple AR guidelines for a seamless and stable setup.
 
-## 🛠 Teknik Detaylar
+## 🛠 Technical Stack
 
 - **Framework:** SwiftUI & RealityKit
-- **Motor:** ARKit 6.0+
-- **Matematik:** SIMD tabanlı yüksek hızlı vektör hesaplamaları
+- **Engine:** ARKit 6.0+
+- **Mathematics:** High-performance SIMD-based vector calculations
 - **Minimum iOS:** 15.0+
 
-## 🚀 Başlangıç
+## 🚀 Getting Started
 
-1. Projeyi Xcode ile açın.
-2. Uygulamayı bir iPhone veya iPad üzerinde çalıştırın (Simülatör AR özelliklerini desteklemez).
-3. Ekranda yüzeyleri tarayın (Coaching Overlay sizi yönlendirecektir).
-4. İmleç yeşil veya mavi olduğunda **"+"** butonu ile ilk noktanızı koyun.
-5. İmleci hareket ettirerek canlı mesafeyi görün ve istediğiniz noktada tekrar **"+"** butonuna basın.
+1. Open the project in Xcode.
+2. Run the app on a physical iPhone or iPad (AR features are not supported on the Simulator).
+3. Scan the surfaces in your environment (the Coaching Overlay will guide you).
+4. When the reticle turns green or blue, tap the **"+"** button to place your first point.
+5. Move the device to see the live distance and tap **"+"** again at your desired destination.
 
 ---
-*Geliştiren: Gorkem Ege*
+*Developed by Gorkem Ege*
