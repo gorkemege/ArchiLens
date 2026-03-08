@@ -1,103 +1,33 @@
-# 🔍 ArchiLens
+# ArchiLens 📐
 
-**ArchiLens** is a high-precision Augmented Reality (AR) measurement tool designed for architects, designers, and spatial enthusiasts. Built with **SwiftUI** and **RealityKit**, it provides real-time distance tracking and surface detection with a minimalist, professional interface.
+ArchiLens, gelişmiş artırılmış gerçeklik (AR) teknolojisini kullanarak milimetrik hassasiyette ölçüm yapmanızı sağlayan profesyonel bir iOS uygulamasıdır. LIDAR ve gelişmiş Raycasting algoritmaları ile donatılmış olan ArchiLens, kararlı ve güvenilir sonuçlar sunar.
 
-![Platform](https://img.shields.io/badge/Platform-iOS%2017.0+-black?style=flat-square&logo=apple)
-![Swift](https://img.shields.io/badge/Swift-5.10-orange?style=flat-square&logo=swift)
-![Framework](https://img.shields.io/badge/Framework-RealityKit-blue?style=flat-square)
+## ✨ Yeni Nesil Özellikler
 
----
+- **Gelişmiş Hassasiyet:** LIDAR mesh verisi ve gerçek zamanlı geometri analizi ile milimetrik doğruluk.
+- **Dinamik Ölçüm:** İki veya daha fazla nokta arasında canlı mesafe takibi. İlk noktayı koyduğunuz an ölçüm başlar.
+- **Hibrit Takip Sistemi:** 
+  - 🟢 **Mesh/Geometry:** En yüksek hassasiyet (LIDAR destekli).
+  - 🔵 **Plane Detection:** Algılanan yüzeyler üzerinde kararlı ölçüm.
+  - 🟠 **Estimated Surface:** Düşük dokulu alanlarda akıllı tahminleme.
+- **Adaptif Yumuşatma (Smoothing):** Ölçümlerdeki titremeyi engelleyen, hareket hızına duyarlı düşük geçirgenli filtre (Low-pass Filter).
+- **Görsel Geri Bildirim:** Yüzey durumuna göre renk değiştiren akıllı imleç (Reticle) sistemi.
+- **AR Coaching Overlay:** Kararlı bir deneyim için resmi Apple AR yönlendirmeleri.
 
-## ✨ Key Features
+## 🛠 Teknik Detaylar
 
-- **🚀 Real-Time Measurement:** Continuous distance calculation from the camera to the physical world using advanced raycasting.
-- **🎯 Dynamic Targeting:** A smart crosshair system that provides visual feedback (Target Locked) when a valid surface is detected.
-- **💎 Modern Glassmorphism UI:** A clean, non-intrusive interface using Apple's `ultraThinMaterial` for a premium feel.
-- **🏗️ Scene Reconstruction:** Leverages LiDAR and Scene Reconstruction (on supported devices) for enhanced spatial awareness.
-- **📏 Unit Precision:** Accurate metric measurements displayed instantly on-screen.
+- **Framework:** SwiftUI & RealityKit
+- **Motor:** ARKit 6.0+
+- **Matematik:** SIMD tabanlı yüksek hızlı vektör hesaplamaları
+- **Minimum iOS:** 15.0+
 
----
+## 🚀 Başlangıç
 
-## 🛠️ Tech Stack
-
-- **UI Framework:** SwiftUI
-- **AR Engine:** RealityKit
-- **Tracking:** ARKit (World Tracking, Plane Detection)
-- **State Management:** Combine / MVVM
-- **Language:** Swift 5.10+
-
----
-
-## 📂 Project Structure
-
-```text
-ArchiLens/
-├── App/                # Main Entry & App Lifecycle
-├── Features/
-│   ├── AR/             # Core AR Logic, ViewModels & Views
-│   ├── Measurement/    # Measurement History & Logic (In-Progress)
-│   └── Settings/       # User Preferences (In-Progress)
-├── Core/               # Utilities, Extensions & Constants
-└── Resources/          # Assets, Fonts & Launch Screen
-```
+1. Projeyi Xcode ile açın.
+2. Uygulamayı bir iPhone veya iPad üzerinde çalıştırın (Simülatör AR özelliklerini desteklemez).
+3. Ekranda yüzeyleri tarayın (Coaching Overlay sizi yönlendirecektir).
+4. İmleç yeşil veya mavi olduğunda **"+"** butonu ile ilk noktanızı koyun.
+5. İmleci hareket ettirerek canlı mesafeyi görün ve istediğiniz noktada tekrar **"+"** butonuna basın.
 
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Xcode 15.0 or later
-- An iOS device with A12 Bionic chip or later (for AR features)
-- iOS 17.0+
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/gorkemege/ArchiLens.git
-   ```
-2. Open `ArchiLens.xcodeproj` in Xcode.
-3. Select your physical iPhone as the target.
-4. Build and Run (**Cmd + R**).
-
----
-
-## 📸 Screenshots
-
-| Scanning | Target Locked |
-| :---: | :---: |
-| *Scanning for surfaces...* | *Live measurement feedback* |
-
-*(Note: Add your actual screenshots here to showcase the app!)*
-
----
-
-## 🗺️ Roadmap
-
-- [x] Real-time center-point measurement.
-- [x] Dynamic crosshair UI feedback.
-- [ ] Multi-point area calculation.
-- [ ] Export measurements as PDF/DXF.
-- [ ] Measurement history log.
-- [ ] Support for imperial units (inches/feet).
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! If you'd like to improve ArchiLens, feel free to fork the repo and create a pull request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-**Developed with ❤️ by [Görkem Ege Zor](https://github.com/gorkemege)**
+*Geliştiren: Gorkem Ege*
