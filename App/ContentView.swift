@@ -12,7 +12,7 @@ struct ContentView: View {
             
             // Layer 2: UI Overlay
             VStack {
-                // Top Header
+                // Top Header with Error/Status
                 HStack {
                     Text("ARCHILENS")
                         .font(.system(size: 12, weight: .black, design: .monospaced))
@@ -25,6 +25,20 @@ struct ContentView: View {
                 }
                 .padding(.top, 60)
                 .padding(.horizontal)
+                
+                if let errorMessage = viewModel.errorMessage {
+                    HStack {
+                        Image(systemName: "exclamationmark.circle.fill")
+                            .foregroundColor(.red)
+                        Text(errorMessage)
+                            .font(.system(size: 12, weight: .semibold, design: .monospaced))
+                    }
+                    .foregroundColor(.red)
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .padding(.horizontal)
+                }
                 
                 Spacer()
                 
